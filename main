@@ -1,0 +1,24 @@
+import os
+import game
+
+def show_menu():
+    """
+    печатает на экране главного меню выборы:
+    TODO:
+        настройки
+        загрузка старой
+
+    """
+    while True:
+        os.system("cls")
+        print("1 - Начать новую игру")
+        print("0 - Выйти из игры")
+
+        answer = input("Введите номер и нажмите ENTER ")
+        if answer == "1":
+            game.start_new_game()
+        elif answer == "0":
+            print("Вышли из игры")
+            break
+
+show_menu()

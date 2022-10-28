@@ -1,0 +1,48 @@
+import shop
+
+def start_new_game():
+    """
+    создать перса:
+    имя
+    здоровье
+    деньги
+    зелья
+    """
+    print("Запустилась новая игра")
+    player_name = input("Введите имя игрока и нажмите ENTER ")
+    if not player_name:
+        player_name = "Святогор"
+    player_hp = 99999
+    player_money = 1000000
+    player_potions = 2
+
+    is_game = True
+    while is_game:
+
+        os.system("cls")
+        show_player_stats(player_name, player_hp, player_money, player_potions)
+
+
+    print("-- игрок:")
+    print(f"имя: {player_name}")
+    print(f"здоровье: {player_hp}")
+    print(f"деньги: {player_money}")
+    print(f"зельки: {player_potions}")
+
+    print("-- ситуации")
+    print(f"зельки: {player_potions}")
+    print(f"")
+    print("1 - поехать на битву")
+    print("2 - играть в кости")
+    print("3 - поехать затариться зельками")
+    print("0 - выйти")
+
+    answer = input()
+    if answer == "1":
+            pass
+    elif answer == "2":
+            pass
+    elif answer == "3":
+            Shop2.visit_shop(player_name, player_hp, player_money, player_potions)
+    elif answer == "0":
+        is_game = False

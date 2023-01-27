@@ -1,0 +1,31 @@
+library = [
+    {
+    "название": "Изучаем Python. Том 1",
+    "автор": "Лутц Марк",
+    "год": 1945,
+    }
+]
+
+def show_books():
+    for num, book in enumerate(library):
+        print("номер на полке", num)
+        print("название", book["название"])
+        print("автор", book["автор"])
+        print("год", book["год"])
+        print("")
+
+show_books()
+
+def add_book():
+    title = input("Введите название книги:")
+    author = input("Введите имя автора:")
+    year = input("Введите дату издания:")
+
+    book = {
+        "название": title,
+        "автор": author,
+        "год": year,
+    }
+
+
+add_book()
